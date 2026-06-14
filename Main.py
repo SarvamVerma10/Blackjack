@@ -18,7 +18,6 @@ speed = 3
 
 walls = []
 for layer in tmx_data.visible_layers:
-    # We specifically look for the layer you named "Collision" in your screenshot!
     if isinstance(layer, pytmx.TiledObjectGroup) and layer.name == "Collision":
         for obj in layer:
             walls.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
@@ -40,7 +39,7 @@ while running:
     if keys[pygame.K_d]: dx += speed 
     player_rect.x += dx
     
-    # B. Check X Collisions
+   
     for wall in walls:
         if player_rect.colliderect(wall): 
             if dx > 0: 
@@ -57,9 +56,9 @@ while running:
 
     for wall in walls:
         if player_rect.colliderect(wall): 
-            if dy > 0: # Moving down
+            if dy > 0: 
                 player_rect.bottom = wall.top
-            if dy < 0: # Moving up
+            if dy < 0: 
                 player_rect.top = wall.bottom
 
     
