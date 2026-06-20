@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="12">
  <tileset firstgid="1" name="tilemap_packed" tilewidth="16" tileheight="16" tilecount="132" columns="12">
-  <image source="../../../Downloads/kenney_tiny-town/Tilemap/tilemap_packed.png" width="192" height="176"/>
+  <image source="tilemap_packed.png" width="192" height="176"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" width="30" height="20">
   <data encoding="csv">
