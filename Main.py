@@ -3,12 +3,12 @@ import pytmx
 
 pygame.init()
 
-screen = pygame.display.set_mode((640, 640))
+screen = pygame.display.set_mode((640, 480))
 canvas = pygame.Surface((320, 320)) 
 clock = pygame.time.Clock()
 
 
-tmx_data = pytmx.load_pygame('SPAWN.tmx') 
+tmx_data = pytmx.load_pygame('runtime/spawn.tmx')
 
 Player_img = pygame.image.load('C1.png').convert_alpha() 
 Player_img = pygame.transform.scale(Player_img, (16, 16))
