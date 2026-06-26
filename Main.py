@@ -4,7 +4,7 @@ import pytmx
 pygame.init()
 
 screen = pygame.display.set_mode((640, 480))
-canvas = pygame.Surface((320, 320)) 
+canvas = pygame.Surface((160, 120)) 
 clock = pygame.time.Clock()
 
 
@@ -13,7 +13,7 @@ tmx_data = pytmx.load_pygame('runtime/spawn.tmx')
 Player_img = pygame.image.load('C1.png').convert_alpha() 
 Player_img = pygame.transform.scale(Player_img, (16, 16))
 player_rect = Player_img.get_rect(topleft=(250, 80))
-speed = 3    
+speed = 1    
 
 # Load Collision Walls
 walls = []
@@ -60,11 +60,11 @@ while running:
                 player_rect.top = wall.bottom
 
     # Camera Logic
-    camera_x = player_rect.x - 160 
-    camera_y = player_rect.y - 160 
+    camera_x = player_rect.x - 80 
+    camera_y = player_rect.y - 60 
     
-    camera_x = max(0, min(camera_x, map_width - 320))
-    camera_y = max(0, min(camera_y, map_height - 320))
+    camera_x = max(0, min(camera_x, map_width - 160))
+    camera_y = max(0, min(camera_y, map_height - 120))
 
     canvas.fill((0, 0, 0)) 
     
@@ -84,7 +84,7 @@ while running:
     canvas.blit(Player_img, (player_rect.x - camera_x, player_rect.y - camera_y)) 
     
     # Scale canvas to screen
-    screen.blit(pygame.transform.scale(canvas, (640, 640)), (0, 0))
+    screen.blit(pygame.transform.scale(canvas, (640, 480)), (0, 0))
             
     pygame.display.flip()
     clock.tick(60) 
