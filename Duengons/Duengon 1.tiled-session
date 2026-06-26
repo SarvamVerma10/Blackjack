@@ -1,0 +1,65 @@
+{
+    "activeFile": "C:/Users/sarva/Desktop/Blackjack/Assets/rpg/Map/sample_indoor.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "C:/Users/sarva/Desktop/Blackjack/Assets/rpg/Map/sample_indoor.tmx": {
+            "scale": 3,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 285.5,
+                "y": 261.5
+            }
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Assets/rpg/Map/sample_indoor.tmx#roguelikeSheet_transparent": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/Floors_Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/Grass.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/Hills.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/Tileset Spring.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/TilesetField.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/TilesetNature.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/spawn.tmx": {
+            "expandedGroupLayers": [
+                19,
+                16
+            ],
+            "scale": 2.12265625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 809.1277143908723,
+                "y": 429.4147957305852
+            }
+        },
+        "C:/Users/sarva/Desktop/Blackjack/runtime/tilemap_packed.tsx": {
+            "scaleInDock": 1
+        }
+    },
+    "map.height": 23,
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 40,
+    "openFiles": [
+        "C:/Users/sarva/Desktop/Blackjack/runtime/spawn.tmx",
+        "C:/Users/sarva/Desktop/Blackjack/Assets/rpg/Map/sample_indoor.tmx"
+    ],
+    "project": "Duengon 1.tiled-project",
+    "recentFiles": [
+        "C:/Users/sarva/Desktop/Blackjack/runtime/spawn.tmx",
+        "C:/Users/sarva/Desktop/Blackjack/Assets/rpg/Map/sample_indoor.tmx"
+    ],
+    "resizeMap.removeObjects": false
+}

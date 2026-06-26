@@ -8,7 +8,7 @@ canvas = pygame.Surface((320, 320))
 clock = pygame.time.Clock()
 
 
-tmx_data = pytmx.load_pygame('runtime/spawn.tmx')
+tmx_data = pytmx.load_pygame('Duengons/Duengon no1.tmx')
 
 Player_img = pygame.image.load('C1.png').convert_alpha() 
 Player_img = pygame.transform.scale(Player_img, (16, 16))

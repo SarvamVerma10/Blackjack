@@ -1,0 +1,57 @@
+{
+    "activeFile": "Dungeon_Tiles.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Dungeon_Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "FG_Cellar.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "Wall_Variations.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "roguelikeDungeon_transparent.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1.5
+        },
+        "tilemap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "tilemap_packed.tsx": {
+            "scaleInDock": 4,
+            "scaleInEditor": 5.5
+        }
+    },
+    "last.imagePath": "C:/Users/sarva/Desktop/Blackjack/Assets/outside/Tilemap",
+    "map.height": 17,
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "Dungeon_Tiles.tsx",
+        "FG_Cellar.tsx",
+        "Wall_Variations.tsx",
+        "tilemap_packed.tsx"
+    ],
+    "project": "duengon.tiled-project",
+    "recentFiles": [
+        "tilemap_packed.tsx",
+        "Wall_Variations.tsx",
+        "FG_Cellar.tsx",
+        "Dungeon_Tiles.tsx",
+        "roguelikeDungeon_transparent.tsx",
+        "tilemap.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
