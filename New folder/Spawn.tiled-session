@@ -1,0 +1,53 @@
+{
+    "activeFile": "TilesetHouse.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "Bitmask references 1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TilesetHouse.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TilesetNature.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TilesetVillageAbandoned.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TilesetWater.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/sarva/Downloads/Sprout Sorry pack/Sprout Sorry pack/Early Access/Plant update 2/Ground tilesets",
+    "map.height": 100,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 100,
+    "openFiles": [
+        "TilesetHouse.tsx",
+        "TilesetNature.tsx",
+        "TilesetVillageAbandoned.tsx",
+        "TilesetWater.tsx"
+    ],
+    "project": "Spawn.tiled-project",
+    "recentFiles": [
+        "Bitmask references 1.tsx",
+        "TilesetWater.tsx",
+        "TilesetVillageAbandoned.tsx",
+        "TilesetNature.tsx",
+        "TilesetHouse.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
