@@ -3,17 +3,23 @@ import pytmx
 
 pygame.init()
 
-screen = pygame.display.set_mode((640, 480))
-canvas = pygame.Surface((160, 120)) 
-clock = pygame.time.Clock()
+# 1. Define resolutions and scale factors clearly
+SCALE_FACTOR = 6
+CANVAS_WIDTH, CANVAS_HEIGHT = 320, 180
+SCREEN_WIDTH, SCREEN_HEIGHT = CANVAS_WIDTH * SCALE_FACTOR, CANVAS_HEIGHT * SCALE_FACTOR
 
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
+canvas = pygame.Surface((CANVAS_WIDTH, CANVAS_HEIGHT)) 
+clock = pygame.time.Clock()
 
 tmx_data = pytmx.load_pygame('runtime/spawn.tmx')
 
 Player_img = pygame.image.load('C1.png').convert_alpha() 
 Player_img = pygame.transform.scale(Player_img, (16, 16))
-player_rect = Player_img.get_rect(topleft=(250, 80))
-speed = 1    
+
+# Adjusted spawn so the player starts within reasonable bounds of the 160x120 view
+player_rect = Player_img.get_rect(topleft=(50, 50))
+speed = 5    
 
 # Load Collision Walls
 walls = []
@@ -34,7 +40,7 @@ while running:
 
     keys = pygame.key.get_pressed() 
     
-    
+    # X Movement & Collision
     dx = 0
     if keys[pygame.K_a]: dx -= speed            
     if keys[pygame.K_d]: dx += speed 
@@ -42,11 +48,10 @@ while running:
     
     for wall in walls:
         if player_rect.colliderect(wall): 
-            if dx > 0: # Moving right
-                player_rect.right = wall.left
-            if dx < 0: # Moving left
-                player_rect.left = wall.right
+            if dx > 0: player_rect.right = wall.left
+            if dx < 0: player_rect.left = wall.right
 
+    # Y Movement & Collision
     dy = 0
     if keys[pygame.K_w]: dy -= speed            
     if keys[pygame.K_s]: dy += speed 
@@ -54,21 +59,22 @@ while running:
 
     for wall in walls:
         if player_rect.colliderect(wall): 
-            if dy > 0: # Moving down
-                player_rect.bottom = wall.top
-            if dy < 0: # Moving up
-                player_rect.top = wall.bottom
+            if dy > 0: player_rect.bottom = wall.top
+            if dy < 0: player_rect.top = wall.bottom
 
-    # Camera Logic
-    camera_x = player_rect.x - 80 
-    camera_y = player_rect.y - 60 
+    # --- CAMERA LOGIC ---
+    # Center the camera on the player using the unscaled canvas dimensions
+    camera_x = player_rect.centerx - (CANVAS_WIDTH // 2)
+    camera_y = player_rect.centery - (CANVAS_HEIGHT // 2)
     
-    camera_x = max(0, min(camera_x, map_width - 160))
-    camera_y = max(0, min(camera_y, map_height - 120))
+    # Clamp camera to map boundaries so it doesn't show black edges
+    camera_x = max(0, min(camera_x, map_width - CANVAS_WIDTH))
+    camera_y = max(0, min(camera_y, map_height - CANVAS_HEIGHT))
 
+    # --- RENDERING ---
     canvas.fill((0, 0, 0)) 
     
-    # Draw Map
+    # Draw Map relative to camera
     for layer in tmx_data.visible_layers:
         if isinstance(layer, pytmx.TiledTileLayer):
             for grid_x, grid_y, gid in layer:
@@ -78,13 +84,11 @@ while running:
                     draw_y = (grid_y * tmx_data.tileheight) - camera_y
                     canvas.blit(tile, (draw_x, draw_y))
 
-   
-
-    # Draw Player
+    # Draw Player relative to camera
     canvas.blit(Player_img, (player_rect.x - camera_x, player_rect.y - camera_y)) 
     
-    # Scale canvas to screen
-    screen.blit(pygame.transform.scale(canvas, (640, 480)), (0, 0))
+    # Scale the low-res canvas up to fill the high-res screen
+    screen.blit(pygame.transform.scale(canvas, (SCREEN_WIDTH, SCREEN_HEIGHT)), (0, 0))
             
     pygame.display.flip()
     clock.tick(60) 
