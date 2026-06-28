@@ -9,21 +9,48 @@ clock = pygame.time.Clock()
 
 tmx_data = pytmx.load_pygame('Spawn/Spawn.tmx')
 
+# Set up Player Image
 Player_img = pygame.image.load('C1.png').convert_alpha() 
 Player_img = pygame.transform.scale(Player_img, (16, 16))
-player_rect = Player_img.get_rect(topleft=(250, 80))
 
-# NEW: Delta time requires float values for smooth movement, as rects only hold integers.
-player_x, player_y = 250.0, 80.0 
-# NEW: Speed is now in pixels per second, rather than pixels per frame.
-speed = 180 
+# --- NEW: DYNAMIC SPAWN SYSTEM ---
+player_x, player_y = 0.0, 0.0 # Default fallback coordinates
+
+
+# Scan the map for the "Spawns" layer
+for layer in tmx_data.visible_layers:
+    if isinstance(layer, pytmx.TiledObjectGroup) and layer.name == "Spawns":
+        for obj in layer:
+            if obj.name == "PlayerSpawn":
+                player_x = float(obj.x)
+                player_y = float(obj.y)
+                
+                break 
+
+# Initialize the rect at the spawn coordinates
+player_rect = Player_img.get_rect(topleft=(int(player_x), int(player_y)))
+speed = 180
+
+
+Player_img = pygame.image.load('C1.png').convert_alpha() 
+Player_img = pygame.transform.scale(Player_img, (16, 16))
+
 
 # Load Collision Walls
 walls = []
+
+# Make sure these names EXACTLY match your layers in Tiled (case-sensitive!)
+solid_tile_layers = ["Fences", "House", "tree", "water", "wood","tree2"]
+
 for layer in tmx_data.visible_layers:
-    if isinstance(layer, pytmx.TiledObjectGroup) and layer.name == "Collision":
-        for obj in layer:
-            walls.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+    if isinstance(layer, pytmx.TiledTileLayer) and layer.name in solid_tile_layers:
+        for grid_x, grid_y, gid in layer:
+            if gid:
+                rect_x = grid_x * tmx_data.tilewidth
+                rect_y = grid_y * tmx_data.tileheight
+                
+                # Create a rect and add it to the walls list
+                walls.append(pygame.Rect(rect_x, rect_y, tmx_data.tilewidth, tmx_data.tileheight))
 
 map_width = tmx_data.width * tmx_data.tilewidth
 map_height = tmx_data.height * tmx_data.tileheight
