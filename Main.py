@@ -1,6 +1,5 @@
 import pygame
-from pytmx.util_pygame import load_pygame
-import pyscroll
+from level import map_draw
 import sys
 
 pygame.init()
@@ -11,11 +10,7 @@ screen=pygame.display.set_mode((width,height), pygame.FULLSCREEN)
 pygame.display.set_caption("Upper Hand")
 clock=pygame.time.Clock()
 #map
-data=load_pygame("runtime/spawn.tmx")
-scroll=pyscroll.data.TiledMapData(data)
-layer=pyscroll.BufferedRenderer(scroll, screen.get_size(), clamp_camera=True)
-layer.zoom=6
-grp=pyscroll.PyscrollGroup(map_layer=layer, default_layer=1)
+grp=map_draw("runtime/spawn.tmx", screen.get_size())
 #loop
 running=True
 while running:
