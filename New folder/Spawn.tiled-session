@@ -1,5 +1,5 @@
 {
-    "activeFile": "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no1.tmx",
+    "activeFile": "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -12,12 +12,20 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 459.66666666666663,
-                "y": 240.3333333333333
+                "x": 324,
+                "y": 300.33333333333326
+            }
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx": {
+            "scale": 2,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 982.5,
+                "y": 745.25
             }
         },
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Dungeon_Tiles.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 3
         },
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Dungeon_Tileset.tsx": {
             "scaleInDock": 3,
@@ -27,15 +35,64 @@
             "scaleInDock": 1
         },
         "C:/Users/sarva/Desktop/Blackjack/Duengons/tilemap_packed.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 3
         },
         "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx": {
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 703.75,
-                "y": 929.25
+                "x": 642.5,
+                "y": 833.75
             }
+        },
+        "C:/Users/sarva/Desktop/Duengon no2.tmx": {
+            "scale": 0.5114928169893816,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 800.5977530834045,
+                "y": 501.47331786542924
+            }
+        },
+        "C:/Users/sarva/Desktop/Duengons/Duengon no1.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 801,
+                "y": 647.5
+            }
+        },
+        "C:/Users/sarva/Desktop/Duengons/Duengon no2.tmx": {
+            "scale": 0.331105559025609,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 801.8590831918506,
+                "y": 798.8388983210714
+            }
+        },
+        "C:/Users/sarva/Desktop/Duengons/Dungeon_Tiles.tsx": {
+            "scaleInDock": 1.5
+        },
+        "C:/Users/sarva/Desktop/Duengons/Dungeon_Tileset.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "C:/Users/sarva/Desktop/Duengons/FG_Cellar.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Duengons/tilemap_packed.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Dungeon_Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Dungeon_Tileset.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/FG_Cellar.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/tilemap_packed.tsx": {
+            "scaleInDock": 1
         },
         "Grass_Tile_layers2.tsx": {
             "scaleInDock": 2,
@@ -70,30 +127,32 @@
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "C:/Users/sarva/Downloads/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset",
+    "last.imagePath": "C:/Users/sarva/Desktop/Duengons",
     "map.height": 100,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "map.width": 100,
     "openFiles": [
-        "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no1.tmx",
-        "C:/Users/sarva/Desktop/Blackjack/Duengons/Dungeon_Tileset.tsx"
+        "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx",
+        "C:/Users/sarva/Desktop/Duengons/Duengon no1.tmx",
+        "C:/Users/sarva/Desktop/Duengons/Dungeon_Tileset.tsx",
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx"
     ],
     "project": "Spawn.tiled-project",
     "recentFiles": [
+        "C:/Users/sarva/Desktop/Duengons/Dungeon_Tileset.tsx",
+        "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx",
+        "C:/Users/sarva/Desktop/Duengons/Duengon no1.tmx",
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx",
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Dungeon_Tileset.tsx",
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no1.tmx",
+        "C:/Users/sarva/Desktop/Duengons/Duengon no2.tmx",
+        "C:/Users/sarva/Desktop/Duengon no2.tmx",
         "Grass_Tile_layers2.tsx",
         "Water_tiles.tsx",
         "Water.tsx",
-        "Tileset Spring.tsx",
-        "TilesetWater.tsx",
-        "TilesetVillageAbandoned.tsx",
-        "TilesetNature.tsx",
-        "TilesetHouse.tsx",
-        "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx",
-        "Bitmask references 1.tsx"
+        "Tileset Spring.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
