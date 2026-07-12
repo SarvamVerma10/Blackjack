@@ -1,0 +1,9 @@
+enemy files
+without animation
+
+enemy item drop
+
+enemy danger directly proportional to their danger level
+
+blackjack risk index and safty index, remove 17 system and add risk based system
+
