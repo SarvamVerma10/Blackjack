@@ -1,5 +1,5 @@
 {
-    "activeFile": "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx",
+    "activeFile": "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -9,7 +9,8 @@
             "scaleInEditor": 1
         },
         "C:/Users/sarva/Desktop/Blackjack - Copy/New folder/Grass_Tile_layers2.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "C:/Users/sarva/Desktop/Blackjack - Copy/New folder/Tileset Spring.tsx": {
             "scaleInDock": 1
@@ -43,7 +44,7 @@
             "scale": 2,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 796.5,
+                "x": 796.75,
                 "y": 1005.75
             }
         },
@@ -60,13 +61,38 @@
         "C:/Users/sarva/Desktop/Blackjack/Duengons/tilemap_packed.tsx": {
             "scaleInDock": 3
         },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/..Spawn/Grass_Tile_layers2.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Duengons/FG_Cellar.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Grass_Tile_layers2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx": {
             "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 678,
-                "y": 863.25
+                "x": 678.25,
+                "y": 839.25
             }
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn/Grass_Tile_layers2.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Tileset Spring.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/TilesetHouse.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/TilesetNature.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/TilesetWater.tsx": {
+            "scaleInDock": 1
         },
         "C:/Users/sarva/Desktop/Duengon no2.tmx": {
             "scale": 0.5114928169893816,
@@ -150,7 +176,8 @@
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "C:/Users/sarva/Desktop/Duengons",
+    "last.externalTilesetPath": "C:/Users/sarva/Desktop/Blackjack/Duengons",
+    "last.imagePath": "C:/Users/sarva/Desktop/Blackjack/Spawn",
     "map.height": 100,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
@@ -160,22 +187,24 @@
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx",
         "C:/Users/sarva/Desktop/Duengons/Duengon no1.tmx",
         "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx",
-        "C:/Users/sarva/Desktop/Blackjack - Copy/Spawn/Spawn.tmx"
+        "C:/Users/sarva/Desktop/Blackjack - Copy/Spawn/Spawn.tmx",
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Grass_Tile_layers2.tsx",
+        "C:/Users/sarva/Desktop/Blackjack - Copy/New folder/Grass_Tile_layers2.tsx"
     ],
     "project": "Spawn.tiled-project",
     "recentFiles": [
-        "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx",
-        "C:/Users/sarva/Desktop/Duengons/Duengon no1.tmx",
+        "C:/Users/sarva/Desktop/Blackjack - Copy/New folder/Grass_Tile_layers2.tsx",
+        "C:/Users/sarva/Desktop/Blackjack/Spawn/Grass_Tile_layers2.tsx",
         "C:/Users/sarva/Desktop/Blackjack - Copy/Spawn/Spawn.tmx",
         "C:/Users/sarva/Desktop/Blackjack/Spawn/Spawn.tmx",
+        "C:/Users/sarva/Desktop/Duengons/Duengon no1.tmx",
+        "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no2.tmx",
         "C:/Users/sarva/Desktop/Duengons/Dungeon_Tileset.tsx",
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Dungeon_Tileset.tsx",
         "C:/Users/sarva/Desktop/Blackjack/Duengons/Duengon no1.tmx",
         "C:/Users/sarva/Desktop/Duengons/Duengon no2.tmx",
         "C:/Users/sarva/Desktop/Duengon no2.tmx",
-        "Grass_Tile_layers2.tsx",
-        "Water_tiles.tsx",
-        "Water.tsx"
+        "Grass_Tile_layers2.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
