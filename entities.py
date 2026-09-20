@@ -60,6 +60,12 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = 90
         self.walls = walls
         self.player = player
+        self.health = 50
+
+    def take_damage(self, amount):
+        self.health -= amount
+        if self.health <= 0:
+            self.kill()
 
     def update(self, dt):
         distance_to_player_x = abs(self.position[0] - self.player.rect.x)
