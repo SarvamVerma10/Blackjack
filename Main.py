@@ -39,30 +39,7 @@ while running:
     # delta time
     dt = clock.tick(60) / 1000.0
 
-    keys = pygame.key.get_pressed()
-
-    
-    player.update(dt, keys, enemies_group)
-    enemies_group.update(dt)
-
-    
-    handle_attack(player, enemies_group, grp)
-
-    # Tell pyscroll to center the camera on the player
-    grp.center(player.rect.center)
-    # display
-    screen.fill((0, 0, 0))
-    
-    mx, my = pygame.mouse.get_pos()
-    target_x = (player.rect.centerx + (mx + grp.view.x)) / 2
-    target_y = (player.rect.centery + (my + grp.view.y)) / 2
-
-# Tell pyscroll to follow that halfway point
-    grp.center((target_x, target_y))
-
-    grp.draw(screen)
-    
-    # control
+    # control events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -72,17 +49,23 @@ while running:
 
     keys = pygame.key.get_pressed()
 
-    # Update logic manually (keeps it clean)
+    # Update entities
     player.update(dt, keys, enemies_group)
     enemies_group.update(dt)
 
-    # Tell pyscroll to center the camera on the player
-    grp.center(player.rect.center)
+    # Handle combat/attacks
+    handle_attack(player, enemies_group, grp, dt)
 
-    # display
+    # Camera aiming (midpoint between player and mouse world pos)
+    mx, my = pygame.mouse.get_pos()
+    target_x = (player.rect.centerx + (mx + grp.view.x)) / 2
+    target_y = (player.rect.centery + (my + grp.view.y)) / 2
+    grp.center((target_x, target_y))
+
+    # Render
     screen.fill((0, 0, 0))
-    grp.draw(screen) # Pyscroll draws the map, player, and enemies automatically!
-    
+    grp.draw(screen)
+
     # Draw Health Bar over the game
     pygame.draw.rect(screen, (255, 0, 0), (10, 10, 100, 20))
     pygame.draw.rect(screen, (0, 255, 0), (10, 10, max(0, player.health), 20))

@@ -1,10 +1,17 @@
 import random
 
-Cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+def draw_card(deck):
+    if not deck:
+        deck.extend([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11] * 4)
+        random.shuffle(deck)
+    return deck.pop()
 
+# Standard Blackjack deck (or multiple suits)
+Cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11] * 4
 random.shuffle(Cards)
-p1 = [Cards.pop(), Cards.pop()]
-p2 = [Cards.pop(), Cards.pop()]
+
+p1 = [draw_card(Cards), draw_card(Cards)]
+p2 = [draw_card(Cards), draw_card(Cards)]
 
 print("Player 1:", p1)
 print("Player 2:", "*" ,p2[1])
@@ -24,7 +31,7 @@ while True:
         action = input("\nPlayer 1, do you want to hit or stay? (h/s): ")
         
         if action.lower() == 'h':
-            p1.append(Cards.pop())
+            p1.append(draw_card(Cards))
             print("Player 1 draws a card:", p1[-1])
             print("Player 1 total is now:", sum(p1))
             
@@ -35,10 +42,12 @@ while True:
             print("Player 1 decides to stay.")
             p1_stay = True
             
-    if sum(p2)<17:
-         p2.append(Cards.pop())
+    if sum(p2) < 17 and not p2_stay:
+         p2.append(draw_card(Cards))
          print("Player 2 draws a card:", p2[-1])
          print("Player 2 total is now:", sum(p2))
+         if sum(p2) >= 21:
+             p2_stay = True
     elif sum(p2)>21:
         print("Player 2 busts! Player 1 wins!")
         break
